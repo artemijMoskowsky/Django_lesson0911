@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        {% block style %}
+        
+        {% endblock  %}
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'core' %}">Core page</a>
+            <a href="{% url 'ukr_lit' %}">Ukrainian literature</a>
+            <a href="{% url 'world_lit' %}">World literature</a>
+            <a href="{% url 'ukr_au' %}">Ukraine authors</a>
+            <a href="{% url 'world_au' %}">World authors</a>
+        </header>
+    {% block content %}
+    
+    {% endblock  %}
+    </body>
+</html>
